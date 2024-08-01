@@ -268,28 +268,6 @@
         initializeMagnificPopup(); // Sayfa yüklendiğinde popup'ı başlat
     });
 
-    $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            autoplay: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 1
-                }
-            }
-        });
-    });
-    /*------------------
-        Background Set
-    --------------------*/
     $('.set-bg').each(function () {
         var bg = $(this).data('setbg');
         $(this).css('background-image', 'url(' + bg + ')');
@@ -309,23 +287,7 @@
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
-
-    /*------------------
-        Hero Slider
-    --------------------*/
-    $('.hero__slider').owlCarousel({
-        loop: true,
-        dots: true,
-        mouseDrag: false,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        items: 1,
-        margin: 0,
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: true,
-    });
-
+    
     var dot = $('.hero__slider .owl-dot');
     dot.each(function () {
         var index = $(this).index() + 1;
@@ -336,82 +298,6 @@
         }
     });
 
-    /*------------------
-        Testimonial Slider
-    --------------------*/
-    $(".testimonial__slider").owlCarousel({
-        loop: true,
-        margin: 0,
-        items: 3,
-        dots: true,
-        dotsEach: 2,
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: true,
-        responsive: {
-            992: {
-                items: 3
-            },
-            768: {
-                items: 2
-            },
-            320: {
-                items: 1
-            }
-        }
-    });
-
-    /*------------------
-        Latest Slider
-    --------------------*/
-    $(".latest__slider").owlCarousel({
-        loop: true,
-        margin: 0,
-        items: 3,
-        dots: true,
-        dotsEach: 2,
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: true,
-        responsive: {
-            992: {
-                items: 3
-            },
-            768: {
-                items: 2
-            },
-            320: {
-                items: 1
-            }
-        }
-    });
-
-    /*------------------
-        Logo Slider
-    --------------------*/
-    $(".logo__carousel").owlCarousel({
-        loop: true,
-        margin: 100,
-        items: 6,
-        dots: false,
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: true,
-        responsive: {
-            992: {
-                items: 5
-            },
-            768: {
-                items: 4
-            },
-            480: {
-                items: 3
-            },
-            320: {
-                items: 2
-            }
-        }
-    });
 
 
 
