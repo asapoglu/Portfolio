@@ -30,18 +30,6 @@
             var mixer = mixitup(containerEl);
         }
     });
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     const links = document.querySelectorAll("ul li a"); // Tüm linkleri seç
-    //     links.forEach(link => {
-    //         link.addEventListener("click", function() {
-    //             const current = document.querySelector("ul li.active"); // Aktif olan öğeyi bul
-    //             if (current) {
-    //                 current.classList.remove("active"); // Aktif class'ını kaldır
-    //             }
-    //             this.parentNode.classList.add("active"); // Tıklanan öğeye aktif class'ını ekle
-    //         });
-    //     });
-    // });
     document.addEventListener("DOMContentLoaded", function () {
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll("ul li a");
@@ -95,24 +83,29 @@
         const itemsPerPage = 8;
         let currentPage = 1;
         const items = [
-            // Buraya tüm portföy öğelerinizin verilerini ekleyin
             {
                 img: "img/portfolio/SoldierSiegeSS.png",
                 title: "Soldier Siege",
                 promotional: "Place your soldiers in slots, roll the dice, spawn soldiers, dominate the battlefield!",
-                href: "img/portfolio/soldierSiegeVid.mp4"
-            },
-            {
-                img: "img/portfolio/ClickerAirlinesSS.png",
-                title: "Clicker Airlines",
-                promotional: " Tap the screen to accelerate the planes. Open new airports. Buy new planes. Make money.Become the best airline in the world. Have fun while managing your airlines!",
-                href: ""
+                href: "img/portfolio/SoldierSiegeVid.mp4"
+            }
+            , {
+                img: "img/portfolio/HatsOnHeadsSS.png",
+                title: "Hats on Heads",
+                promotional: "Drag and release to throw hats. Try to put hats on heads. Clone your hats. Upgrade your hats count and income. Reach the end. And most importantly don't forget to have fun!",
+                href: "img/portfolio/HatsOnHeadsVid.mp4"
             },
             {
                 img: "img/portfolio/ConnectDefenceSS.png",
                 title: "Connect Defence",
                 promotional: "Combine elements with bullets!  Use turrets to protect your base. Keep playing by unlocking new elements and projectiles. Combine elements to make different combinations.",
                 href: "img/portfolio/ConnectDefenceVid.mp4"
+            },
+            {
+                img: "img/portfolio/PixelTornadoSS.png",
+                title: "Pixel Tornado",
+                promotional: "Devour objects with your tornado. Earn money. Upgrade your level and buy orbits. Fell the satisfying sensation of destroying the city. Reach the end. And most importantly don't forget to have fun!",
+                href: "img/portfolio/PixelTornadoVid.mp4"
             },
             {
                 img: "img/portfolio/CannonadeSS.png",
@@ -139,21 +132,16 @@
                 href: "img/portfolio/DragTheDotVid.mp4"
             },
             {
-                img: "img/portfolio/PixelTornadoSS.png",
-                title: "Pixel Tornado",
-                promotional: "Devour objects with your tornado. Earn money. Upgrade your level and buy orbits. Fell the satisfying sensation of destroying the city. Reach the end. And most importantly don't forget to have fun!",
-                href: "img/portfolio/PixelTornadoVid.mp4"
-            },
-            {
                 img: "img/portfolio/PullAndGrindSS.png",
                 title: "Pull and Grind",
                 promotional: "Pull objects to the grinder with your rope. Add stickman. Merge them. Grind objects to earn money. And most importantly don't forget to have fun!",
                 href: "img/portfolio/PullAndGrindVid.mp4"
-            }, {
-                img: "img/portfolio/HatsOnHeadsSS.png",
-                title: "Hats on Heads",
-                promotional: "Drag and release to throw hats. Try to put hats on heads. Clone your hats. Upgrade your hats count and income. Reach the end. And most importantly don't forget to have fun!",
-                href: "img/portfolio/HatsOnHeadsVid.mp4"
+            },
+            {
+                img: "img/portfolio/ClickerAirlinesSS.png",
+                title: "Clicker Airlines",
+                promotional: " Tap the screen to accelerate the planes. Open new airports. Buy new planes. Make money.Become the best airline in the world. Have fun while managing your airlines!",
+                href: ""
             }, {
                 img: "img/portfolio/MallSecuritySS.png",
                 title: "Mall Security",
@@ -195,19 +183,19 @@
                 title: "Hamsters Wheels",
                 promotional: "You have to work hard and also smart to manage the production line of your tasty hamster foods. Harvest the crops. Put them in the production machine. Pack them, and sell them to your customers.",
                 href: ""
-            },
+            }
             , {
                 img: "img/portfolio/DressedUpSS.png",
                 title: "Dressed Up!",
                 promotional: "Let's get ready. Design your outfit and be the most beautiful girl in the city!",
                 href: ""
-            },
+            }
             , {
                 img: "img/portfolio/CrystalSeekerSS.png",
                 title: "Crystal Seeker",
                 promotional: "Crystal Seeker is eager to find some precious things. Are you ready to help him on his journey? Find your way throughout the path. Avoid obstacles. Upgrade your hero. Collect boosts. Find crystals. Trade your crystals to get better ones. Have fun!",
                 href: ""
-            },
+            }
             , {
                 img: "img/portfolio/SwapCurrencySS.png",
                 title: "Swap Currency",
@@ -243,51 +231,6 @@
 
                 portfolioGallery.innerHTML += itemHTML;
             });
-
-            // itemsToShow.forEach(item => {
-            //     const itemHTML = `
-            //         <div class="col-lg-4 col-md-6 col-sm-6 mix branding">
-            //             <div class="portfolio__item">
-            //                 <div class="portfolio__item__video" style="background-image: url('${item.img}');">
-            //                     <a href="${item.href}" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-            //                 </div>
-            //                 <div class="portfolio__item__text">
-            //                     <h4>${item.title}</h4>
-            //                     <p>${item.promotional}</p>
-            //                 </div>
-            //             </div>
-            //         </div>
-            //     `;
-
-            //     portfolioGallery.innerHTML += itemHTML;
-            // });
-
-
-            // itemsToShow.forEach(item => {
-            //     const itemHTML = `
-            //         <div class="col-lg-3 col-md-6 col-sm-6 mix branding">
-            //             <div class="portfolio__item">
-            //                 <div class="portfolio__item__video" style="background-image:url('${item.img}'); position: relative;">
-            //                 </div>
-
-            //                         <div class="portfolio__item__text">
-            //                             <h4>${item.title}</h4>
-            //                             <p>${item.promotional}</p>
-            //                         </div>
-            //                 </div>
-
-            //             </div>
-            //             `;
-            //     portfolioGallery.innerHTML += itemHTML;
-            // });
-
-
-            // const setBgElements = document.querySelectorAll('[data-setbg]');
-            // setBgElements.forEach(el => {
-            //     const imgUrl = el.getAttribute('data-setbg');
-            //     el.style.backgroundImage = `url('${imgUrl}')`;
-            // });
-            // Popup'ı yeni öğeler için yeniden başlat
 
             initializeMagnificPopup();
         }
